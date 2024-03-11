@@ -1,0 +1,19 @@
+﻿@model List<Contacts.Models.Contact>
+
+@if (Model is not null)
+{
+    foreach (var contact in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">@contact.Name</h5>
+                    <p class="card-text">@contact.MobilePhone</p>
+                    <p class="card-text">@contact.AlternateMobilePhone</p>
+                    <p class="card-text">@contact.Email</p>
+                    <p class="card-text"><small class="text-muted">@contact.ShortDescription</small></p>
+                </div>
+            </div>
+        </div>
+    }
+}
